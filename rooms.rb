@@ -34,12 +34,22 @@ class Rooms
     @songs << song
   end
 
+  def available_song_titles_in_room
+    return @songs
+  end
+  
   def is_full?
     @guests.length >= @capacity
     #wanted to use guest_count() but += method doesn't work in this case.
   end
 
- 
+  def room_has_fav_song(person)
+    for song in @songs
+      return true if person.fav_song == song
+    end
+    return false
+  end
+
 
 
   

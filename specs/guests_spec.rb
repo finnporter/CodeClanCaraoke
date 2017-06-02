@@ -1,11 +1,13 @@
 require 'minitest/autorun'
 require 'minitest/rg'
 require_relative '../guests'
+require_relative '../songs'
 
 class TestGuests < MiniTest::Test
 
   def setup
-    @guest_01 = Guests.new("Jamie", 100, "More than a feeling")
+    @song_01 = Songs.new("Queen", "Bohemian Rhapsondy")
+    @guest_01 = Guests.new("Jamie", 100, @song_01)
   end
 
   def test_guest_has_name

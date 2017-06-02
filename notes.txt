@@ -1,7 +1,9 @@
 
 # add lyrics to songs from other file
-# give guests fav song title by specific artists
 
 # guests split bill
     price has to be lower than combined cash
     check_in_multiple people
+    put them in an array and concat that array into the rooms guests array
+
+# 
