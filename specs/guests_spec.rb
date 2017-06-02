@@ -31,6 +31,11 @@ class TestGuests < MiniTest::Test
     assert_equal(10, @guest_01.pays_for_room(90))
   end
 
+  def test_guest_pays_for_drink
+    @guest_01.pays_for_drink(@drink_02.price)
+    assert_equal(98, @guest_01.cash)
+  end
+
 
 
 end

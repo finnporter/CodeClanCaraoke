@@ -23,6 +23,10 @@ class Guests
   def pays_for_room(price_per_hour)
     return @cash -= price_per_hour
   end
+
+  def pays_for_drink(price)
+    return @cash -= price
+  end
   
   
 end
