@@ -9,8 +9,8 @@ class TestRooms < MiniTest::Test
   def setup
     @room_01 = Rooms.new("Green", 2, 25)
 
-    @guest_01 = Guests.new("Jamie")
-    @guest_02 = Guests.new("Eugene")
+    @guest_01 = Guests.new("Jamie", 100)
+    @guest_02 = Guests.new("Eugene", 80)
 
     @song_01 = Songs.new("Queen", "Bohemian Rhapsondy")
     @song_02 = Songs.new("Madonna", "Like a Virgin")
