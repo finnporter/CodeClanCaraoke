@@ -19,6 +19,7 @@ class Rooms
 
   def check_in_guest(person)
     @guests << person if person.can_afford_room?(@price_per_hour)
+    person.pays_for_room(@price_per_hour)
   end
 
   def check_out_guest(person)
