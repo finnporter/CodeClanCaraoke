@@ -42,10 +42,15 @@ class TestRooms < MiniTest::Test
     @room_01.add_song(@song_01)
   end
 
-  def test_room_is_full
+  def test_room_is_full__returns_false
+    @room_01.check_in_guest(@guest_01)
+    assert_equal(false, @room_01.is_full?)
+  end
+
+  def test_room_is_full__returns_true
     @room_01.check_in_guest(@guest_01)
     @room_01.check_in_guest(@guest_02)
-    assert_equal(@room_01.capacity, @room_01.guest_count)
+    assert_equal(true, @room_01.is_full?)
   end
 
 end

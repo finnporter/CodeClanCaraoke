@@ -32,6 +32,11 @@ class Rooms
     @songs << song
   end
 
+  def is_full?
+    @guests.length >= @capacity
+    #wanted to use guest_count() but += method doesn't work in this case.
+  end
+
 
   
   
