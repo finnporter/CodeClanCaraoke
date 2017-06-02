@@ -12,4 +12,8 @@ class TestSong < MiniTest::Test
     assert_equal("Queen", @song_01.artist)
   end
 
+  def test_song_has_title
+    assert_equal("Bohemian Rhapsondy", @song_01.title)
+  end
+
 end

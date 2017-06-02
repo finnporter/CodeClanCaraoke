@@ -1,1 +1,17 @@
+X Create rooms, songs and guests
+
+# create array of guests in room
+
+Check in guests to rooms/Check out guests from rooms
+
+Add songs to rooms
+
+Rooms should have guests, songs, and maybe a name
+
+Songs should have an artist and a title
+
+Guests should have a name
+
+
+
 # add lyrics to songs from other file
