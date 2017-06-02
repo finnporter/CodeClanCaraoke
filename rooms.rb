@@ -8,6 +8,7 @@ class Rooms
     @name = name
     @capacity = capacity
     @guests = []
+    @songs = []
   end
 
   def guest_count
@@ -21,6 +22,14 @@ class Rooms
   def check_out_guest(person)
     index = @guests.index(person)
     @guests.slice!(index, 1)
+  end
+
+  def song_count
+    return @songs.length
+  end
+
+  def add_song(song)
+    @songs << song
   end
 
 
