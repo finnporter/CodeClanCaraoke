@@ -18,6 +18,11 @@ class Rooms
     @guests << person
   end
 
+  def check_out_guest(person)
+    index = @guests.index(person)
+    @guests.slice!(index, 1)
+  end
+
 
   
   
