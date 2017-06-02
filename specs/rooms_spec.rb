@@ -9,12 +9,13 @@ class TestRooms < MiniTest::Test
   def setup
     @room_01 = Rooms.new("Green", 2, 25)
 
-    @guest_01 = Guests.new("Jamie", 100)
-    @guest_02 = Guests.new("Eugene", 80)
+    @guest_01 = Guests.new("Jamie", 100, "More than a feeling")
+    @guest_02 = Guests.new("Eugene", 80, "Like a Virgin")
 
     @song_01 = Songs.new("Queen", "Bohemian Rhapsondy")
-    @song_02 = Songs.new("Madonna", "Like a Virgin")
-    @song_03 = Songs.new("David Bowie", "Life on Mars")
+    @song_02 = Songs.new("Boston", "More than a feeling")
+    @song_03 = Songs.new("Madonna", "Like a Virgin")
+    @song_04 = Songs.new("David Bowie", "Life on Mars")
 
   end
 
@@ -44,6 +45,7 @@ class TestRooms < MiniTest::Test
 
   def test_add_song_to_room
     @room_01.add_song(@song_01)
+    assert_equal(1, @room_01.song_count)
   end
 
   def test_room_is_full__returns_false
@@ -56,5 +58,7 @@ class TestRooms < MiniTest::Test
     @room_01.check_in_guest(@guest_02)
     assert_equal(true, @room_01.is_full?)
   end
+
+
 
 end

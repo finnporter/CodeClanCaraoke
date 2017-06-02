@@ -18,7 +18,7 @@ class Rooms
   end
 
   def check_in_guest(person)
-    @guests << person
+    @guests << person if person.can_afford_room?(@price_per_hour)
   end
 
   def check_out_guest(person)
@@ -38,6 +38,8 @@ class Rooms
     @guests.length >= @capacity
     #wanted to use guest_count() but += method doesn't work in this case.
   end
+
+ 
 
 
   
