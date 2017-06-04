@@ -42,11 +42,13 @@ class TestGuests < MiniTest::Test
     assert_equal(6, @guest_01.level_of_drunk)
   end
 
-  # def test_guest_gets_drunk
-  #   @guest_01.pays_for_drink(@drink_01.price)
-  #   @guest_01.pays_for_drink(@drink_01.price)
-  #   assert_equal(0, @guest_01.level_of_drunk)
-  # end
+  def test_is_drunk?
+    @guest_01.gets_drunk(@drink_01)
+    @guest_01.gets_drunk(@drink_01)
+    @guest_01.gets_drunk(@drink_01)
+    @guest_01.gets_drunk(@drink_01)
+    assert_equal(true, @guest_01.is_drunk?)
+  end
 
 
 

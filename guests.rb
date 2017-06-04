@@ -30,6 +30,10 @@ class Guests
   def gets_drunk(drink)
     @level_of_drunk += drink.strength
   end
+
+  def is_drunk?
+    return true if @level_of_drunk >= 10
+  end
   
   
 end
