@@ -7,7 +7,9 @@ require_relative '../drink'
 class TestGuests < MiniTest::Test
 
   def setup
-    @song_01 = Songs.new("Queen", "Bohemian Rhapsondy")
+    
+    @song_00 = Songs.new("Queen", "Bohemian Rhapsondy", "./@song_00.txt")
+    @song_01 = Songs.new("Queen", "Bohemian Rhapsondy", "./@song_01.txt")
 
     @guest_01 = Guests.new("Jamie", 100, @song_01)
 
@@ -48,6 +50,14 @@ class TestGuests < MiniTest::Test
     @guest_01.gets_drunk(@drink_01)
     @guest_01.gets_drunk(@drink_01)
     assert_equal(true, @guest_01.is_drunk?)
+  end
+
+  def test_guest_sings
+    assert_equal("Is this the real life? Is this just fantasy?", @guest_01.guest_sings(@song_00.lyrics_file))
+  end
+
+  def test_guest_sings_when_drunk
+    
   end
 
 

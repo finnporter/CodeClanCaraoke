@@ -34,6 +34,10 @@ class Guests
   def is_drunk?
     return true if @level_of_drunk >= 10
   end
+
+  def guest_sings(song)
+    lyrics = File.read(song)
+  end
   
   
 end
