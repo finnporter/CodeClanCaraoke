@@ -11,9 +11,8 @@ class Guests
     @name = name
     @cash = cash
     @fav_song = fav_song
-    @level_of_drunk = level_of_drunk
+    @level_of_drunk = 0
     @tab = 0
-    @consumption = []
   end
 
   def can_afford_room?(price_per_hour)
@@ -26,6 +25,10 @@ class Guests
 
   def pays_for_drink(price)
     return @cash -= price
+  end
+
+  def gets_drunk(drink)
+    @level_of_drunk += drink.strength
   end
   
   
