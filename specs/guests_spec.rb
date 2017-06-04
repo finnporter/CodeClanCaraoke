@@ -9,6 +9,7 @@ class TestGuests < MiniTest::Test
   def setup
     
     @song_00 = Songs.new("Queen", "Bohemian Rhapsondy", "./@song_00.txt")
+    # song_00 exists for testing only (contains only 1 line of the lyrics.)
     @song_01 = Songs.new("Queen", "Bohemian Rhapsondy", "./@song_01.txt")
 
     @guest_01 = Guests.new("Jamie", 100, @song_01)
@@ -54,10 +55,6 @@ class TestGuests < MiniTest::Test
 
   def test_guest_sings
     assert_equal("Is this the real life? Is this just fantasy?", @guest_01.guest_sings(@song_00.lyrics_file))
-  end
-
-  def test_guest_sings_when_drunk
-    
   end
 
 

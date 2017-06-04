@@ -3,16 +3,13 @@ class Guests
   attr_accessor :name,
                 :cash,
                 :fav_song,
-                :level_of_drunk,
-                :tab
-                :consumption
+                :level_of_drunk
 
   def initialize(name, cash, fav_song)
     @name = name
     @cash = cash
     @fav_song = fav_song
     @level_of_drunk = 0
-    @tab = 0
   end
 
   def can_afford_room?(price_per_hour)
