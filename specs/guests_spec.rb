@@ -8,9 +8,9 @@ class TestGuests < MiniTest::Test
 
   def setup
     
-    @song_00 = Songs.new("Queen", "Bohemian Rhapsondy", "./@song_00.txt")
+    @song_00 = Songs.new("Queen", "Bohemian Rhapsondy", "./lyrics/@song_00.txt")
     # song_00 exists for testing only (contains only 1 line of the lyrics.)
-    @song_01 = Songs.new("Queen", "Bohemian Rhapsondy", "./@song_01.txt")
+    @song_01 = Songs.new("Queen", "Bohemian Rhapsondy", "./lyrics/@song_01.txt")
 
     @guest_01 = Guests.new("Jamie", 100, @song_01)
 

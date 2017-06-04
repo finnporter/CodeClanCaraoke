@@ -9,9 +9,9 @@ class TestRooms < MiniTest::Test
   def setup
     @room_01 = Rooms.new("Green", 2, 25)
 
-    @song_01 = Songs.new("Queen", "Bohemian Rhapsondy", "./song_01.txt")
-    @song_02 = Songs.new("Boston", "More than a feeling", "/song_02.txt")
-    @song_03 = Songs.new("Madonna", "Like a Virgin", "./song_03.txt")
+    @song_01 = Songs.new("Queen", "Bohemian Rhapsondy", "./lyrics/song_01.txt")
+    @song_02 = Songs.new("Boston", "More than a feeling", "./lyrics/song_02.txt")
+    @song_03 = Songs.new("Madonna", "Like a Virgin", "./lyrics/song_03.txt")
 
     @guest_01 = Guests.new("Jamie", 100, @song_02)
     @guest_02 = Guests.new("Eugene", 80, @song_03)
